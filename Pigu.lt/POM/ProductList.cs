@@ -22,12 +22,6 @@ namespace Pigu.lt.POM
 
         public void SelectProduct(int x)
         {
-            //IJavaScriptExecutor javascriptExecutor = (IJavaScriptExecutor)driver;
-            //javascriptExecutor.ExecuteScript("arguments[0].click();", 
-            //driver.FindElement(By.XPath("(//div[@id='main_container_wrapper']//li)[" +x+"]")));
-
-
-
             By temp = By.XPath("(//div[@id='main_container_wrapper']//li)[" + x + "]");
             Thread.Sleep(1000);
             Actions action = new Actions(driver);
