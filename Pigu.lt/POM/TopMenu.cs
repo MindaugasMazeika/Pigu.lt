@@ -18,8 +18,8 @@ namespace Pigu.lt.POM
         }
         public void SearchByText(string text)
         {
-            generalMethods.EnterText("//input[@id='searchInput']", text);
-            generalMethods.ClickElement("//i[@class='c-icon--search']");
+            generalMethods.EnterText("//input[@name='search_string']", text);
+            generalMethods.ClickElement("//button[@data-plugin='searchSubmitButton']");
 
 
         }

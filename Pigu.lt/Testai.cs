@@ -27,10 +27,10 @@ namespace Pigu.lt
             ChromeOptions options = new ChromeOptions();
             options.AddArguments("--disable-notifications");
             driver = new ChromeDriver(options);
-            driver.Url = "https://pigu.lt";
+            driver.Url = "https://www.rde.lt/";
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
-            driver.FindElement(By.XPath("//div[@class='cookies_wrapper']//button[@type='button']")).Click();
+            driver.FindElement(By.XPath("//div[@class='cookie_window']//a[2]")).Click();
         }
 
         [TearDown]
@@ -47,9 +47,10 @@ namespace Pigu.lt
             ProductList productList = new ProductList(driver);
             ProductCard productCard = new ProductCard(driver);  
             
-            topMenu.SearchByText("Iphone 14");
-            productList.SelectProduct(3);
-            productCard.ValidateMainInfo(); 
+            topMenu.SearchByText("Iphone 12");
+            productList.SelectProduct(1);
+            productCard.ValidateMainInfo();
+            productCard.ValidateOtherSections();
 
         }
 
