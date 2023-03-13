@@ -28,7 +28,6 @@ namespace Pigu.lt.POM
             Assert.IsTrue(productPrice.Displayed);
             Assert.IsTrue(addToCartButton.Displayed);
             Assert.IsTrue(productDescription.Displayed);
-
         }
 
         public void ValidateOtherSections() { 
